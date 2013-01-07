@@ -1,0 +1,132 @@
+
+% \documentclass[11pt,singlecolumn,letterpaper,UTF8]{article}
+\documentclass[11pt,a4paper]{article}
+% \usepackage{naaclhlt2013}
+\include{zdq_setting}
+
+% for Chinese
+\usepackage{xltxtra}
+% \setmainfont[Mapping=tex-text]{WenQuanYi Micro Hei}
+
+% \AtBeginDvi{\special{pdf:tounicode UTF8-UCS2}} % make side index not Garbled﻿
+
+
+\title{Note: Machine Learning a Probabilistic Perspective \cite{murphy:2012:Book:MLaPP} by Murphy }
+
+\author{\textit{Zheng Daqi}}
+\makeindex
+\begin{document}
+\maketitle
+
+\abstract{This is a note taken when I read the book}\\
+
+\section{Reading Plan and Progress}
+\begin{itemize}
+ \item Contents -- Done
+ \item Chapter 1 -- today 3:00--5:00 pm
+ \item Every Chapters' Summary -- today
+\end{itemize}
+
+\section{Notation Explanation}
+\begin{itemize}
+ \item Most of the contents are the direct quotation from the book, so without extra notation.
+ \item Sections started with ``My'' are my notes.
+ \item Items marks by ``TODO'' are my notes.
+ \item Anything braced in square braces [my notes] are my notes.
+\end{itemize}
+
+
+\section{Concepts (Definition)}
+\paragraph{Machine Learning}\label{Definition:Machine Learning}
+we define machine learning as a set of methods that can
+automatically detect patterns in data, and then use the uncovered patterns to predict future
+data, or to perform other kinds of decision making under uncertainty (such as planning how to
+collect more data!).
+
+\subsection{Types of Machine Learning \ref{Definition:Machine Learning}}
+\paragraph{Supervised Learning}\label{Supervised Learning}
+(predictive)
+\subparagraph{Goal}
+the goal is to learn a mapping from inputs $\mathbf{x}$ to outputs $y$.
+\newline
+Our main goal is to make predictions on novel inputs, meaning ones that we have not seen before (this is called generalization), 
+since predicting the response on the training set is easy (we can just look up the answer).
+\subparagraph{Given}
+given a labeled set of input-output pairs $\mathcal{D}=\{(\mathbf{x}_i,y_i)\}^N_{i=1}$
+
+\paragraph{Unsupervised Learning}
+(descriptive, knowledge discovery)
+\subparagraph{Goal}
+the goal is to find “interesting patterns” in the data.
+\subparagraph{Given}
+only given inputs $\mathcal{D}=\{\mathbf{x}_i\}^N_{i=1}$
+
+\paragraph{Reinforcement Learning}
+(not included in this book)
+This is useful for learning how to act or behave when given occasional reward or punishment signals. 
+(For example, consider how a baby learns to walk.)
+
+\subsection{Tasks in Supervised Learning \ref{Supervised Learning}}
+
+\paragraph{Classification}
+Here the goal is to learn a mapping from inputs $\mathbf{x}$ to outputs $y$,where $y∈{1,...,C}$, with $C$ being the number of classes.
+\begin{description}
+ \item [binary classification] $C=2$
+ \item [multiclass classification] $C>2$
+ \item [multi-label classification] If the class labels are not mutually exclusive (e.g., somebody may be
+classified as tall and strong), we call itmulti-label classification, but this is best viewed as
+predicting multiple related binary class labels (a so-called multiple output model).
+\end{description}
+
+One way to formalize the problem is as function approximation.
+
+\subsection{TODO}
+\paragraph{Problem Formalization}
+\paragraph{Exploratory Data Analysis}\label{Definition:Exploratory Data Analysis}
+
+\section{Phenomenon}
+\paragraph{Long Tail}\label{Phenomenon:Long Tail}
+In fact, data across a variety of domains exhibits a property known as thelong tail, 
+which means that a few things (e.g., words) are very common, 
+but most things are quite rare (see Section 2.4.6 for details).
+
+\section{Attitude}
+\paragraph{Problem involving uncertainty} 
+This books adopts the view that the best way to solve such problems is to use the tools
+of probability theory. Probability theory can be applied to any problem involving uncertainty.
+
+\paragraph{Generalizing from small data}
+This \ref{Phenomenon:Long Tail} means that the core statistical issues that we discuss in this book, 
+concerning generalizing from relatively small samples sizes, 
+are still very relevant even in the big data era.
+
+\paragraph{Feature Extraction} 
+Such feature extraction is an important, but difficult, task. 
+Most machine learning methods use features chosen by some human. 
+Later we will discuss some methods that can learn good features from the data.
+
+\section{Experience}
+\paragraph{Exploratory Data Analysis}\ref{Definition:Exploratory Data Analysis}
+It is always a good idea to perform exploratory data analysis, 
+such as plotting the data, before applying a machine learning method.
+
+\section{My Experience}
+
+\subsection{What to Plot}
+\paragraph{Scatter Plot}
+Visualize the pair-wised variables relationship.
+
+\section{My Idea TODO}
+\paragraph{Re-Plot the 20 newsgroup classification in Figure 1.2 }
+sort the words in different order.
+\begin{itemize}
+ \item total frequency
+ \item other metric
+\end{itemize}
+
+
+\bibliographystyle{plain}
+
+\bibliography{library}
+
+\end{document}

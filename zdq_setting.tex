@@ -1,0 +1,90 @@
+
+
+%%%%%%% For Chinese Char %%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{xltxtra} % can use only once
+
+% use for various fonts
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont={SimHei}]{SimSun}
+\setCJKsansfont{SimSun} % Sorry I don't have enough fonts.
+\setCJKmonofont{SimHei}
+
+\punctstyle{quanjiao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{makeidx}
+
+% for algorithm
+\usepackage{algorithm}
+% \usepackage{algorithmic}
+
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{pstricks}
+\usepackage[noend]{algpseudocode}
+\usepackage{cancel} % zdq@2012.05.30 for cancel in math formulas
+
+
+% WARNING: hyperef can be used only once!!!
+% \usepackage[bookmarks]{hyperref} % for bookmarks/index/idx in pdf 
+% \usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage[bookmarks,pagebackref,breaklinks,colorlinks,urlcolor=blue]{hyperref} % zdq@2012.06.05 for backref
+
+
+% \usepackage[margin= 4cm]{geometry}
+
+% \usepackage{graphicx}
+% \usepackage{epsfig}
+% \usepackage{cancel}
+
+% \usepackage[utf8x]{inputenc}
+
+
+% \DeclareMathOperator*{\argmax}{arg\,max}
+% \DeclareMathOperator*{\argmin}{arg\,min}
+
+% \newcommand{\E}{{\mathbb{E}}} % zdq@2012.05.29 for Expectation's E in Math formula
+
+% Setup TikZ
+% \usepackage{tikz} % zdq@2011.09.18 for draw
+% \usetikzlibrary{arrows}
+% \tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% \def\ie\emph{i.e.}
+
+% \linespread{1.5}
+
+
+% for math and formula
+\usepackage{amsfonts}
+% \usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{amsthm} % for new theorem 
+\newtheorem{Objective}{Objective}
+\newtheorem{Assumption}{Assumption}
+\newtheorem{Estimator}{Estimator}
+
+\newcommand{\iref}[1]{~{\ref{#1}}~} % zdq@2012.05.29 for ~\ref{}~
+\newcommand{\icite}[1]{~{\cite{#1}}~} % zdq@2012.05.29 for ~\cite{}~
+\newcommand{\engtxt}[1]{{\texttt{#1}}} % zdq@2012.05.29 for English text in Chinese env
+\newcommand{\E}{{\mathbb{E}}} % zdq@2012.05.29 for Expectation's E in Math formula
+\newcommand{\R}{{\mathbb{R}}} % zdq@2012.05.29 for Real Field's R in Math formula
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+% \usepackage[normalem]{ulem} % zdq@2011.12.01 for underline; fail to compile under xelatex
+
+%% Setup TikZ
+\usepackage{tikz} % zdq@2011.09.18 for draw
+% \usetikzlibrary{snakes}
+\usetikzlibrary{arrows}
